@@ -1,7 +1,7 @@
 import React from "react"
 
 export function User({ user: { login, avatar_url } }) {
-  const profileUrl = `${process.env.GITHUB_URL}${login}`
+  const profileUrl = `${process.env.REACT_APP_GITHUB_URL}${login}`
 
   return (
     <div className="Card">
