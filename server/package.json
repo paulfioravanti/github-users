@@ -1,7 +1,6 @@
 {
   "name": "github-users",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "type": "module",
   "dependencies": {
@@ -10,7 +9,7 @@
     "graphql": "^15.1.0"
   },
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon src/app.js"
   },
   "author": "Paul Fioravanti <paul.fioravanti@gmail.com>",
   "devDependencies": {
