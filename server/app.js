@@ -1,6 +1,7 @@
-const { ApolloServer, gql } = require('apollo-server')
-const axios = require('axios')
+import apollo from "apollo-server"
+import axios from "axios"
 
+const { ApolloServer, gql } = apollo
 const typeDefs = gql`
   type User {
     id: ID
@@ -17,7 +18,6 @@ const resolvers = {
     users: async () => {
       try {
         const users = await axios.get('https://api.github.com/users')
-        console.log("users.data", users.data)
         return users.data.map(({ id, login, avatar_url }) => ({
           id,
           login,
