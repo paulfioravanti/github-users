@@ -15,5 +15,8 @@
   "author": "Paul Fioravanti <paul.fioravanti@gmail.com>",
   "devDependencies": {
     "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
