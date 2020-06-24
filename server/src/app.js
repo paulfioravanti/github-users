@@ -12,6 +12,8 @@ const server = new ApolloServer({
   resolvers,
 })
 
+// NOTE: Port config is to allow Heroku to choose the port the server is
+// deployed to in production.
 server
-  .listen()
+  .listen({ port: process.env.PORT || 4000 })
   .then(({ url }) => console.log(`Server ready at ${url}`))
