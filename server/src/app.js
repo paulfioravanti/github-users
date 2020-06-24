@@ -6,6 +6,7 @@ import { resolvers } from "./resolvers.js"
 const { ApolloServer, gql } = apollo
 
 dotenv.config()
+
 const server = new ApolloServer({
   typeDefs,
   resolvers,
