@@ -5,9 +5,14 @@ import { ApolloProvider } from "@apollo/react-hooks";
 
 import "./index.css";
 import App from "./App";
+import { Maybe } from "./Utils";
 import * as serviceWorker from "./serviceWorker";
 
-const client = new ApolloClient({
+type ClientProps = {
+  uri: Maybe<string>
+}
+
+const client: ApolloClient<ClientProps> = new ApolloClient<ClientProps>({
   uri: process.env.REACT_APP_APOLLO_SERVER_URL
 });
 
