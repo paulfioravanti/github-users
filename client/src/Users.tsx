@@ -21,7 +21,7 @@ const GET_USERS: DocumentNode = gql`
     users {
       id
       login
-      avatar_url
+      avatarUrl
     }
   }
 `

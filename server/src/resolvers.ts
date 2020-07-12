@@ -1,10 +1,16 @@
 import axios, { AxiosResponse } from "axios"
 import { IResolvers } from "apollo-server"
 
-type User = {
+type UserData = {
   id: string,
   login: string,
   avatar_url: string
+}
+
+type UserProps = {
+  id: string,
+  login: string,
+  avatarUrl: string
 }
 
 let GITHUB_URL: string
@@ -17,7 +23,7 @@ if (process.env.GITHUB_URL) {
 
 export const resolvers: IResolvers = {
   Query: {
-    users: async (): Promise<User[]> => {
+    users: async (): Promise<UserProps[]> => {
       const users: AxiosResponse = await axios.get(GITHUB_URL)
       return users.data.map(extractData)
     }
@@ -25,7 +31,7 @@ export const resolvers: IResolvers = {
 }
 
 /* eslint-disable camelcase */
-function extractData({ id, login, avatar_url }: User): User {
-  return { id, login, avatar_url }
+function extractData({ id, login, avatar_url }: UserData): UserProps {
+  return { id, login, avatarUrl: avatar_url }
 }
 /* eslint-enable camelcase */

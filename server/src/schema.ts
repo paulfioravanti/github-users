@@ -5,7 +5,7 @@ export const typeDefs: DocumentNode = gql`
   type User {
     id: ID
     login: String
-    avatar_url: String
+    avatarUrl: String
   }
 
   type Query {

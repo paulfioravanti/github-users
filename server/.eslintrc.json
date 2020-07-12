@@ -23,7 +23,14 @@
     "no-use-before-define": ["error", { "functions": false, "classes": true, "variables": true }],
     "quotes": ["error", "double"],
     "semi": ["error", "never"],
-    "import/extensions": ["error", "ignorePackages"],
     "import/no-default-export": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   }
 }

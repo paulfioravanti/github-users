@@ -3,7 +3,7 @@ import React from "react"
 export type UserProps = {
   id: string,
   login: string,
-  avatar_url: string
+  avatarUrl: string
 }
 
 type Props = {
@@ -18,13 +18,13 @@ if (process.env.REACT_APP_GITHUB_URL) {
   throw new Error("REACT_APP_GITHUB_URL needs to be set!")
 }
 
-export function User({ user: { login, avatar_url } }: Props): JSX.Element {
+export function User({ user: { login, avatarUrl } }: Props): JSX.Element {
   const profileUrl: string = `${GITHUB_URL}${login}`
 
   return (
     <div className="Card">
       <div>
-        <img alt="avatar" className="Card--avatar" src={avatar_url} />
+        <img alt="avatar" className="Card--avatar" src={avatarUrl} />
         <h1 className="Card--name">
           {login}
         </h1>
