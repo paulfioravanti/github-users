@@ -1,4 +1,5 @@
 import apollo from "apollo-server"
+
 const { gql } = apollo
 
 export const typeDefs = gql`
