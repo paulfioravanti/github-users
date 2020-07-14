@@ -25,7 +25,10 @@
   ],
   "rules": {
     "comma-dangle": ["error", "never"],
-    "no-use-before-define": ["error", { "functions": false, "classes": true, "variables": true }],
+    "no-use-before-define": [
+      "error",
+      { "functions": false, "classes": true, "variables": true }
+    ],
     "quotes": ["error", "double"],
     "semi": ["error", "never"],
     "import/extensions": ["error", "ignorePackages"],
