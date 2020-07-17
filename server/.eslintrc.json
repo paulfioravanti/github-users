@@ -8,6 +8,7 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/errors",
+    "plugin:import/typescript",
     "plugin:import/warnings"
   ],
   "parser": "@typescript-eslint/parser",
@@ -20,17 +21,12 @@
   ],
   "rules": {
     "comma-dangle": ["error", "never"],
-    "no-use-before-define": ["error", { "functions": false, "classes": true, "variables": true }],
+    "import/no-default-export": "error",
+    "no-use-before-define": [
+      "error",
+      { "functions": false, "classes": true, "variables": true }
+    ],
     "quotes": ["error", "double"],
-    "semi": ["error", "never"],
-    "import/no-default-export": "error"
-  },
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "paths": ["src"],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    }
+    "semi": ["error", "never"]
   }
 }
