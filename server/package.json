@@ -2,6 +2,14 @@
   "name": "github-users",
   "version": "1.0.0",
   "license": "MIT",
+  "author": "Paul Fioravanti <paul.fioravanti@gmail.com>",
+  "scripts": {
+    "start": "nodemon src/app.ts",
+    "postinstall": "tsc"
+  },
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "apollo-server": "^2.15.0",
     "axios": "^0.19.2",
@@ -9,11 +17,6 @@
     "eslint-import-resolver-typescript": "^2.0.0",
     "graphql": "^15.1.0"
   },
-  "scripts": {
-    "start": "nodemon src/app.ts",
-    "postinstall": "tsc"
-  },
-  "author": "Paul Fioravanti <paul.fioravanti@gmail.com>",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.6.0",
     "@typescript-eslint/parser": "^3.6.0",
@@ -22,9 +25,6 @@
     "eslint-plugin-import": "^2.22.0",
     "nodemon": "^2.0.4",
     "typescript": "^3.9.6"
-  },
-  "engines": {
-    "node": "14.x"
   },
   "settings": {
     "import/resolver": {
