@@ -1,6 +1,6 @@
 import React from "react"
 import { useQuery } from "@apollo/react-hooks"
-import { ApolloError } from "apollo-boost"
+import { ApolloError } from "@apollo/client"
 import gql from "graphql-tag"
 import { DocumentNode } from "graphql"
 import { User, UserProps } from "./User"

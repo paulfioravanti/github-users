@@ -1,17 +1,16 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import ApolloClient from "apollo-boost"
+import {
+  ApolloClient,
+  InMemoryCache
+} from "@apollo/client"
 import { ApolloProvider } from "@apollo/react-hooks"
 
 import "./index.css"
 import { App } from "./App"
-import { Maybe } from "./Utils"
 
-type ClientProps = {
-  uri: Maybe<string>
-}
-
-const client: ApolloClient<ClientProps> = new ApolloClient<ClientProps>({
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
   uri: process.env.REACT_APP_APOLLO_SERVER_URL
 })
 
