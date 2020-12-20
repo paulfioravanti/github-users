@@ -33,33 +33,39 @@ npm start --prefix client
 
 ## Deploy
 
-Both the front end and back end applications have been deployed to [Heroku][],
-and can be found at the following links:
+The back end application is deployed to [Heroku][], while the front end is
+deployed to [Github Pages][] using [gh-pages][] and can be found at the
+following links:
 
 - [Client][]
 - [Server][]
 
 ```sh
 ➜ [github-users (master)]$ git remote -v
-heroku-client   https://git.heroku.com/github-users-client.git (fetch)
-heroku-client   https://git.heroku.com/github-users-client.git (push)
 heroku-server   https://git.heroku.com/github-users-server.git (fetch)
 heroku-server   https://git.heroku.com/github-users-server.git (push)
 origin  git@github.com:paulfioravanti/github-users.git (fetch)
 origin  git@github.com:paulfioravanti/github-users.git (push)
 ```
 
-Both applications share the same Github repository, but are deployed to
-separate Heroku instance using `git subtree`:
+### Deploy Back End
 
 ```sh
-git subtree push --prefix client heroku-client master
 git subtree push --prefix server heroku-server master
 ```
 
+### Deploy Front End
+
+```sh
+npm run --prefix client build
+npm run --prefix client deploy
+```
+
 [Apollo GraphQL: How to Build a Full-stack App with React and Node Js]: https://www.freecodecamp.org/news/apollo-graphql-how-to-build-a-full-stack-app-with-react-and-node-js/
-[Client]: https://github-users-client.herokuapp.com
+[Client]: https://www.paulfioravanti.com/github-users/
 [ESLint]: https://eslint.org/
+[gh-pages]: https://github.com/tschaub/gh-pages
+[Github Pages]: https://pages.github.com/
 [Heroku]: https://heroku.com
 [Server]: https://github-users-server.herokuapp.com
 [Typescript]: https://www.typescriptlang.org/
