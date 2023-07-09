@@ -33,12 +33,8 @@ npm start --prefix client
 
 ## Deploy
 
-The back end application is deployed to [Heroku][], while the front end is
-deployed to [Github Pages][] using [gh-pages][] and can be found at the
-following links:
-
-- [Client][]
-- [Server][]
+The back end application was originally deployed to [Heroku][], while the front
+end is deployed to [Github Pages][] using [gh-pages][].
 
 ```sh
 ➜ [github-users (master)]$ git remote -v
